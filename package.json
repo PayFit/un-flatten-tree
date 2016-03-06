@@ -1,0 +1,39 @@
+{
+  "name": "un-flatten-tree",
+  "version": "0.1.0",
+  "description": "Functions for converting trees to lists and vice versa.",
+  "main": "un-flatten-tree.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "prepublish": "uglifyjs -c -m -o un-flatten-tree.min.js un-flatten-tree.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyegoroff/un-flatten-tree.git"
+  },
+  "keywords": [
+    "tree",
+    "flatten",
+    "unflatten"
+  ],
+  "author": "iyegoroff <iegoroff@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iyegoroff/un-flatten-tree/issues"
+  },
+  "homepage": "https://github.com/iyegoroff/un-flatten-tree#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "lodash.find": "^4.2.0",
+    "lodash.foreach": "^4.1.0",
+    "lodash.map": "^4.2.1",
+    "lodash.transform": "^4.2.1"
+  }
+}
