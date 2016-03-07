@@ -1,5 +1,7 @@
 un-flatten-tree
 =========
+[![Build Status](https://travis-ci.org/iyegoroff/un-flatten-tree.svg?branch=master)](https://travis-ci.org/iyegoroff/un-flatten-tree)
+[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/un-flatten-tree/badge.svg?branch=master)](https://coveralls.io/github/iyegoroff/un-flatten-tree?branch=master)
 
 A small module for converting trees to lists and vice versa. Can be used in browser and Node.
 
