@@ -1,6 +1,6 @@
 {
   "name": "un-flatten-tree",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Functions for converting trees to lists and vice versa.",
   "main": "un-flatten-tree.js",
   "directories": {
