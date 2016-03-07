@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "mocha --reporter spec",
-    "prepublish": "uglifyjs -c -m -o un-flatten-tree.min.js un-flatten-tree.js"
+    "prepublish": "uglifyjs -c -m -o un-flatten-tree.min.js un-flatten-tree.js",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,9 @@
   "homepage": "https://github.com/iyegoroff/un-flatten-tree#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.8",
+    "istanbul": "^0.4.2",
+    "lodash.map": "^4.2.1",
     "mocha": "^2.4.5",
     "uglify-js": "^2.6.2"
   },

@@ -1,6 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
+var map = require('lodash.map');
 var uft = require('../un-flatten-tree');
 
 function Node(name, children) {
@@ -83,10 +84,12 @@ describe('#flatten', function () {
             {l: 4, i: undefined}
         ];
 
-        expect(uft.flatten(
-            tree,
-            function (node) { return node.i; }
-        )).to.eql(list);
+        expect(
+            uft.flatten(
+                tree,
+                function (node) { return node.i; }
+            )
+        ).to.eql(list);
     });
 
     it('should convert tree to list of nodes with parent ids', function () {
@@ -116,16 +119,18 @@ describe('#flatten', function () {
             {id: 8, pid: 3}
         ];
 
-        expect(uft.flatten(
-            tree,
-            function (node) { return node.items; },
-            function (node, parentNode) {
-                return {
-                    id: node.id,
-                    pid: parentNode !== undefined ? parentNode.id : null
-                };
-            }
-        )).to.eql(list);
+        expect(
+            uft.flatten(
+                tree,
+                function (node) { return node.items; },
+                function (node, parentNode) {
+                    return {
+                        id: node.id,
+                        pid: parentNode !== undefined ? parentNode.id : null
+                    };
+                }
+            )
+        ).to.eql(list);
     });
 
     it('should convert tree of node objects to list of node names', function () {
@@ -144,11 +149,13 @@ describe('#flatten', function () {
 
         var list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-        expect(uft.flatten(
-            tree,
-            function (node) { return node.getChildren(); },
-            function (node) { return node.getName(); }
-        )).to.eql(list);
+        expect(
+            uft.flatten(
+                tree,
+                function (node) { return node.getChildren(); },
+                function (node) { return node.getName(); }
+            )
+        ).to.eql(list);
     });
 
     it('should convert tree to list with generated parent ids', function () {
@@ -174,18 +181,20 @@ describe('#flatten', function () {
 
         var cnt = 1;
 
-        expect(uft.flatten(
-            tree,
-            function (node) { return node.items; },
-            function (node, parentNode, nodeId, parentId) {
-                return {
-                    name: node.name,
-                    id: nodeId,
-                    pid: parentId
-                };
-            },
-            function () { return cnt++; }
-        )).to.eql(list);
+        expect(
+            uft.flatten(
+                tree,
+                function (node) { return node.items; },
+                function (node, parentNode, nodeId, parentId) {
+                    return {
+                        name: node.name,
+                        id: nodeId,
+                        pid: parentId
+                    };
+                },
+                function () { return cnt++; }
+            )
+        ).to.eql(list);
     });
     
     it('should convert array-like object tree to list', function () {
@@ -212,11 +221,62 @@ describe('#flatten', function () {
             {name: 'F'}
         ];
 
-        expect(uft.flatten(
-            tree,
-            function (node) { return node.items; },
-            function (node) { return {name: node.name}; }
-        )).to.eql(list);
+        expect(
+            uft.flatten(
+                tree,
+                function (node) { return node.items; },
+                function (node) { return {name: node.name}; }
+            )
+        ).to.eql(list);
+    });
+
+    //test case taken from here - http://stackoverflow.com/q/23919887/4134913
+    it('should convert tree to list of "routes"', function () {
+        var tree = {
+            "f": {
+                "t": "100",
+                "f": {
+                    "i": ['150'],
+                    "b": ['300'],
+                    "f": {
+                        "k": 100
+                    }
+                },
+                "l": ['255']
+            },
+            "c": {
+                "s": {
+                    "t": ["100"]
+                },
+                "t": "100"
+            }
+        };
+
+        var list = ["ft", "ffi", "ffb", "fffk", "fl", "cst", "ct"];
+
+        function walk(tree) {
+            return map(tree, function (v, k) {
+                return {
+                    name: k,
+                    items: (typeof v !== 'object' || v instanceof Array) ? [] : walk(v)
+                };
+            });
+        }
+
+        function getChildNodes(node) {
+            return (node.items || []).map(function (item) {
+                return {
+                    name: node.name + item.name,
+                    items: item.items
+                };
+            });
+        }
+
+        expect(
+            uft.flatten(walk(tree), getChildNodes)
+                .filter(function (node) { return node.items.length === 0; })
+                .map(function (node) { return node.name; })
+        ).to.eql(list);
     });
 });
 
@@ -256,12 +316,14 @@ describe('#unflatten', function () {
             {id: 1, pid: null}
         ];
 
-        expect(uft.unflatten(
-            list,
-            function (node, parentNode) { return node.pid === parentNode.id; },
-            function (node, parentNode) { parentNode.items.push(node); },
-            function (node) { return {id: node.id, items: []}; }
-        )).to.eql(tree);
+        expect(
+            uft.unflatten(
+                list,
+                function (node, parentNode) { return node.pid === parentNode.id; },
+                function (node, parentNode) { parentNode.items.push(node); },
+                function (node) { return {id: node.id, items: []}; }
+            )
+        ).to.eql(tree);
     });
 
     it('should convert list with parent ids to node tree', function () {
@@ -285,12 +347,14 @@ describe('#unflatten', function () {
             {id: 6, pid: 3, name: 'F'}
         ];
 
-        expect(uft.unflatten(
-            list,
-            function (node, parentNode) { return node.pid === parentNode.id; },
-            function (node, parentNode) { parentNode.addChild(node); },
-            function (node) { return new Node(node.name); }
-        )).to.eql(tree);
+        expect(
+            uft.unflatten(
+                list,
+                function (node, parentNode) { return node.pid === parentNode.id; },
+                function (node, parentNode) { parentNode.addChild(node); },
+                function (node) { return new Node(node.name); }
+            )
+        ).to.eql(tree);
     });
     
     it('should convert array-like object to tree', function () {
@@ -321,11 +385,40 @@ describe('#unflatten', function () {
             length: 8
        };
        
-        expect(uft.unflatten(
-            list,
-            function (node, parentNode) { return node.pid === parentNode.id; },
-            function (node, parentNode) { parentNode.items.push(node); },
-            function (node) { return {id: node.id, items: []}; }
-        )).to.eql(tree);
+        expect(
+            uft.unflatten(
+                list,
+                function (node, parentNode) { return node.pid === parentNode.id; },
+                function (node, parentNode) { parentNode.items.push(node); },
+                function (node) { return {id: node.id, items: []}; }
+            )
+        ).to.eql(tree);
+    });
+
+    it('should convert list to tree without converting nodes', function () {
+        var tree = [
+            {id: 3, pid: null, items: [
+                {id: 8, pid: 3, items: [
+                    {id: 2, pid: 8, items: [
+                        {id: 1, pid: 2, items: []}
+                    ]}
+                ]}
+            ]}
+        ];
+
+        var list = [
+            {id: 8, pid: 3, items: []},
+            {id: 3, pid: null, items: []},
+            {id: 2, pid: 8, items: []},
+            {id: 1, pid: 2, items: []}
+        ];
+
+        expect(
+            uft.unflatten(
+                list,
+                function (node, parentNode) { return node.pid === parentNode.id; },
+                function (node, parentNode) { parentNode.items.push(node); }
+            )
+        ).to.eql(tree);
     });
 });

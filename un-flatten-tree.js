@@ -13,27 +13,17 @@
     function flattenTree(tree, getChildNodes, convertNode, generateId) {
         convertNode = convertNode === undefined ? identity : convertNode;
 
-        var iterate = generateId === undefined
-            ? function (flatten, nodes, parentNode) {
-                forEach(nodes, function (node) {
-                    flatten.push(convertNode(node, parentNode));
+        var iterate = function (flatten, nodes, parentNode, parentNodeId) {
+            forEach(nodes, function (node) {
+                var nodeId = generateId === undefined ? undefined : generateId(node);
 
-                    iterate(flatten, getChildNodes(node), node);
-                });
+                flatten.push(convertNode(node, parentNode, nodeId, parentNodeId));
 
-                return flatten;
-            }
-            : function (flatten, nodes, parentNode, parentNodeId) {
-                forEach(nodes, function (node) {
-                    var nodeId = generateId(node);
+                iterate(flatten, getChildNodes(node), node, nodeId);
+            });
 
-                    flatten.push(convertNode(node, parentNode, nodeId, parentNodeId));
-
-                    iterate(flatten, getChildNodes(node), node, nodeId);
-                });
-
-                return flatten;
-            };
+            return flatten;
+        };
 
         return iterate([], tree);
     }
