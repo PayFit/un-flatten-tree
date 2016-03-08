@@ -9,13 +9,16 @@ A small module for converting trees to lists and vice versa. Can be used in brow
 
 ## Installation
 
-  `npm install un-flatten-tree`
+    ```bash
+    npm install un-flatten-tree
+    ```
 
 ## Usage
 
 #### flatten
 Converts tree to list.
 
+    ```javascript
     var uft = require('un-flatten-tree');
     
     var tree = [
@@ -33,12 +36,14 @@ Converts tree to list.
         node => node.items, // obtain child nodes
         node => node.name   // create output node
     );
+    ```
   
 `list` should be `['A', 'B', 'C', 'D', 'E']`
 
 #### unflatten
 Converts list to tree.
 
+    ```javascript
     var uft = require('un-flatten-tree');
     
     var list = [
@@ -55,9 +60,11 @@ Converts list to tree.
         (node, parentNode) => parentNode.items.push(node), // add node to parentNode
         node => ({id: node.id, items: []})                 // create output node
     );
+    ```
     
 `tree` should be
   
+    ```javascript
     [
         {id: 1, items: []}, 
         {id: 2, items: [
@@ -68,12 +75,15 @@ Converts list to tree.
             ]}
         ]}
     ]
+    ```
     
-More complex examples of usage can be found in `test/test.js`.     
+More complex examples of usage can be found in `test/test.js`. Docs in `un-flatten-tree.d.ts`.    
 
 ## Tests
 
-  `npm test`
+  ```bash
+  npm test
+  ```
 
 ## Contributing
 
