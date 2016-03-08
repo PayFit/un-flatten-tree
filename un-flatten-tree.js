@@ -1,7 +1,6 @@
 (function(root) {
     'use strict';
 
-    var forEach = (root._ && root._.forEach) || require('lodash.foreach');
     var transform = (root._ && root._.transform) || require('lodash.transform');
     var map = (root._ && root._.map) || require('lodash.map');
     var find = (root._ && root._.find) || require('lodash.find');
@@ -12,20 +11,36 @@
 
     function flattenTree(tree, getChildNodes, convertNode, generateId) {
         convertNode = convertNode === undefined ? identity : convertNode;
+        var stack = (tree && tree.length) ? [{ pointer: tree, offset: 0 }] : [];
+        var flatten = [];
+        var current;
 
-        var iterate = function (flatten, nodes, parentNode, parentNodeId) {
-            forEach(nodes, function (node) {
+        while (stack.length) {
+            current = stack.pop();
+
+            while (current.offset < current.pointer.length) {
+                var node = current.pointer[current.offset];
                 var nodeId = generateId === undefined ? undefined : generateId(node);
+                var children = getChildNodes(node);
 
-                flatten.push(convertNode(node, parentNode, nodeId, parentNodeId));
+                flatten.push(convertNode(node, current.node, nodeId, current.nodeId));
 
-                iterate(flatten, getChildNodes(node), node, nodeId);
-            });
+                current.offset++;
 
-            return flatten;
-        };
+                if (children) {
+                    stack.push(current);
 
-        return iterate([], tree);
+                    current = {
+                        pointer: children,
+                        offset: 0,
+                        node: node,
+                        nodeId: nodeId
+                    };
+                }
+            }
+        }
+
+        return flatten;
     }
 
     function unflattenTree(list, isChildNode, addChildNode, convertNode) {
