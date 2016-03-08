@@ -264,7 +264,7 @@ describe('#flatten', function () {
         }
 
         function getChildNodes(node) {
-            return (node.items || []).map(function (item) {
+            return node.items.map(function (item) {
                 return {
                     name: node.name + item.name,
                     items: item.items
@@ -276,6 +276,27 @@ describe('#flatten', function () {
             uft.flatten(walk(tree), getChildNodes)
                 .filter(function (node) { return node.items.length === 0; })
                 .map(function (node) { return node.name; })
+        ).to.eql(list);
+    });
+
+    it('should convert deeply nested tree to list', function () {
+        var tree = {id: 0, items: []};
+        var list = [0];
+        var treeHead = tree;
+
+        for (var i = 1; i <= 100000; i++) {
+            treeHead.items.push({id: i, items: []});
+            treeHead = treeHead.items[0];
+
+            list.push(i);
+        }
+
+        expect(
+            uft.flatten(
+                [tree],
+                function (node) { return node.items; },
+                function (node) { return node.id; }
+            )
         ).to.eql(list);
     });
 });
