@@ -10,7 +10,7 @@ A small module for converting trees to lists and vice versa. Can be used in brow
 ## Installation
 
 ```bash
-npm install un-flatten-tree
+$ npm install un-flatten-tree
 ```
 
 ## Usage
@@ -82,7 +82,7 @@ More complex examples of usage can be found in `test/test.js`. Docs in `un-flatt
 ## Tests
 
 ```bash
-npm test
+$ npm test
 ```
 
 ## Contributing
