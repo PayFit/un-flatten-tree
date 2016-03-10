@@ -34,9 +34,5 @@
     "mocha": "^2.4.5",
     "uglify-js": "^2.6.2"
   },
-  "dependencies": {
-    "lodash.find": "^4.2.0",
-    "lodash.map": "^4.2.1",
-    "lodash.transform": "^4.2.1"
-  }
+  "dependencies": {}
 }

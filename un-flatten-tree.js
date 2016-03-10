@@ -1,9 +1,18 @@
 (function(root) {
     'use strict';
 
-    var transform = (root._ && root._.transform) || require('lodash.transform');
-    var map = (root._ && root._.map) || require('lodash.map');
-    var find = (root._ && root._.find) || require('lodash.find');
+    var map = Array.prototype.map;
+    var reduce = Array.prototype.reduce;
+
+    function find(list, predicate) {
+        for (var i = 0, len = list.length; i < len; i++) {
+            if (predicate(list[i])) {
+                return list[i];
+            }
+        }
+
+        return undefined;
+    }
     
     function identity(x) {
         return x;
@@ -44,8 +53,10 @@
     }
 
     function unflattenTree(list, isChildNode, addChildNode, convertNode) {
+        list = list || [];
+
         if (convertNode === undefined) {
-            return transform(list, function (tree, node) {
+            return reduce.call(list, function (tree, node) {
 
                 var parentNode = find(list, function (parentNode) {
                     return isChildNode(node, parentNode);
@@ -57,17 +68,19 @@
                 } else {
                     addChildNode(node, parentNode);
                 }
+
+                return tree;
             }, []);
 
         } else {
-            list = map(list, function (node) {
+            list = map.call(list, function (node) {
                 return {
                     in: node,
                     out: convertNode(node)
                 };
             });
 
-            return transform(list, function (tree, node) {
+            return reduce.call(list, function (tree, node) {
 
                 var parentNode = find(list, function (parentNode) {
                     return isChildNode(node.in, parentNode.in);
@@ -84,6 +97,8 @@
                         }).out
                     );
                 }
+
+                return tree;
             }, []);
         }
     }
