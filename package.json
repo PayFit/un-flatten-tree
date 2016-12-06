@@ -9,7 +9,7 @@
     "build": "tsc && uglifyjs -c -m -o ./dist/un-flatten-tree.min.js ./dist/un-flatten-tree.js",
     "test": "npm run lint && tsc -p tests && intern-client config=build/tests/intern",
     "lint": "tslint un-flatten-tree.ts tests/**/*.ts",
-    "coverage": "remap-istanbul -i coverage/coverage-final.json -t text-lcov | coveralls"
+    "coverage": "remap-istanbul -i coverage/coverage-final.json --type text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
