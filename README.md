@@ -5,6 +5,7 @@ un-flatten-tree
 [![Coverage Status](https://coveralls.io/repos/github/iyegoroff/un-flatten-tree/badge.svg?branch=master)](https://coveralls.io/github/iyegoroff/un-flatten-tree?branch=master)
 [![Dependency Status](https://david-dm.org/iyegoroff/un-flatten-tree.svg)](https://david-dm.org/iyegoroff/un-flatten-tree)
 [![devDependency Status](https://david-dm.org/iyegoroff/un-flatten-tree/dev-status.svg)](https://david-dm.org/iyegoroff/un-flatten-tree#info=devDependencies)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg)](#typescript)
 [![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/un-flatten-tree)
 
 A small module for converting trees to lists and vice versa. Can be used in browser and Node.
@@ -12,7 +13,7 @@ A small module for converting trees to lists and vice versa. Can be used in brow
 ## Installation
 
 ```bash
-$ npm install un-flatten-tree
+$ npm i un-flatten-tree
 ```
 
 ## Usage
@@ -79,14 +80,16 @@ var tree = uft.unflatten(
 ]
 ```
     
-More complex examples of usage can be found in `test/test.js`. Docs in `un-flatten-tree.d.ts`.    
+More complex examples of usage can be found in `tests` folder.
 
-## Tests
+### Typescript
 
-```bash
-$ npm test
-```
+This module also contains type declarations.
 
-## Contributing
+```typescript
+import * as uft from 'un-flatten-tree';
 
-Add unit tests for any new or changed functionality.
+// or
+
+import { unflatten, flatten } from 'un-flatten-tree';
+```    
