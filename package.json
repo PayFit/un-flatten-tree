@@ -30,7 +30,7 @@
     "@types/lodash": "^4.14.42",
     "coveralls": "^2.11.15",
     "intern": "^3.4.2",
-    "lodash.map": "^4.6.0",
+    "lodash-amd": "^4.17.2",
     "remap-istanbul": "^0.7.0",
     "tslint": "^4.0.2",
     "tslint-config-standard": "^2.0.0",

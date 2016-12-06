@@ -1,5 +1,5 @@
-import * as map from 'lodash/map';
 import * as bdd from 'intern!bdd';
+import { map } from 'lodash';
 import { flatten } from '../../un-flatten-tree';
 import * as expect from 'intern/chai!expect';
 import Node from './Node';
