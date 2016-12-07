@@ -8,6 +8,7 @@
     "preversion": "npm run build",
     "build": "tsc && uglifyjs -c -m -o ./dist/un-flatten-tree.min.js ./dist/un-flatten-tree.js",
     "test": "npm run lint && tsc -p tests && intern-client config=build/tests/intern",
+    "test:browser": "tsc -p tests && intern-runner config=build/tests/intern-browser",
     "lint": "tslint un-flatten-tree.ts tests/**/*.ts",
     "coverage": "remap-istanbul -i coverage/coverage-final.json --type text-lcov | coveralls"
   },
