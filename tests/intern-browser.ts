@@ -34,7 +34,7 @@ export const environments = [
         },
         {
             browserName: 'internet explorer',
-            version: ['8', '11'],
+            version: ['10', '11'],
             platform: 'Windows 7',
             recordVideo: false,
             recordScreenshots: false
