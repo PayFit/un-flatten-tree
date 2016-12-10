@@ -12,6 +12,12 @@
     "lint": "tslint un-flatten-tree.ts tests/**/*.ts",
     "coverage": "remap-istanbul -i coverage/coverage-final.json --type text-lcov | coveralls"
   },
+  "files": [
+    "dist/",
+    "tests/",
+    "un-flatten-tree.ts",
+    "tsconfig.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iyegoroff/un-flatten-tree.git"
