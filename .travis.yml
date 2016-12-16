@@ -17,6 +17,7 @@ addons:
 
 branches:
   only:
+    - master
     - /^v\d+\.\d+\.\d+$/
 
 deploy:
