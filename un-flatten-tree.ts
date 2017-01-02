@@ -94,7 +94,7 @@ export function unflatten <Node, OutNode>(
         return reduce.call(
             list,
             (tree: Node[], node: Node) => {
-                const parentNode = find(list, parentNode => isChildNode(node, parentNode));
+                const parentNode = find(list, parent => isChildNode(node, parent));
 
                 if (parentNode === undefined) {
                     tree.push(node);
@@ -115,7 +115,7 @@ export function unflatten <Node, OutNode>(
         return reduce.call(
             mappedList,
             (tree: OutNode[], node: { in: Node; out: OutNode }) => {
-                const parentNode = find(mappedList, parentNode => isChildNode(node.in, parentNode.in));
+                const parentNode = find(mappedList, parent => isChildNode(node.in, parent.in));
 
                 if (parentNode === undefined) {
                     tree.push(node.out);
