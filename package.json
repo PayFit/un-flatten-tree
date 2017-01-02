@@ -15,7 +15,7 @@
     "test:browser": "tsc -p tests && intern-runner config=build/tests/intern-browser",
     "lint": "tslint un-flatten-tree.ts tests/**/*.ts",
     "coverage": "remap-istanbul -i coverage/coverage-final.json --type text-lcov | coveralls",
-    "break-cache": "node break-cache -i README.md -m \"\\.svg\" -o README.md",
+    "break-cache": "break-cache -i README.md -m \"\\.svg\" -o README.md",
     "break-cache-commit": "npm run break-cache && git commit -am \"[skip ci] readme cache break\""
   },
   "files": [
