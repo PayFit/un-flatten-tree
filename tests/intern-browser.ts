@@ -1,26 +1,18 @@
 export * from './intern';
 
 export const environments = [
-    {
-        browserName: 'Browser',
-        appiumVersion: '1.5.3',
-        deviceName: 'Android Emulator',
-        deviceOrientation: 'portrait',
-        platformVersion: '5.1',
-        platformName: 'Android'
-    }
     // {
     //     browserName: 'iphone',
     //     version: ['8.1', '9.2'],
     //     recordVideo: false,
     //     recordScreenshots: false
     // },
-    // {
-    //     browserName: 'android',
-    //     version: ['4.4', '5.1'],
-    //     recordVideo: false,
-    //     recordScreenshots: false
-    // },
+    {
+        browserName: 'android',
+        version: ['4.4', '5.1'],
+        recordVideo: false,
+        recordScreenshots: false
+    }//,
     // {
     //     browserName: 'chrome',
     //     version: ['53', '54'],
