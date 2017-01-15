@@ -6,7 +6,7 @@ export const environments = [
         appiumVersion: '1.5.3',
         deviceName: 'Android Emulator',
         deviceOrientation: 'portrait',
-        platformVersion: '4.4',
+        platformVersion: '5.1',
         platformName: 'Android'
     }
     // {
