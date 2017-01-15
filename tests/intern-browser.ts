@@ -9,7 +9,7 @@ export const environments = [
     // },
     {
         browserName: 'android',
-        version: ['4.4', '5.1'],
+        version: ['5.1'],
         recordVideo: false,
         recordScreenshots: false
     }//,
