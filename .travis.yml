@@ -24,7 +24,14 @@ deploy:
   provider: npm
   email: iegoroff@gmail.com
   api_key:
-    secure: "MtvFwnXyUN+c6LzPaD3cH/8PC6L/D6aouYlY/9ZOtlKIXMPQNVWByhygJuBgvOCp8kwqDSQyS3E2cKpHRr9sq6KfV+gyjufEvvL+V3EiXuKfCcLbIGPPRZVZKMJ1Har4X1w+WHc1wgknFNFETnnwTaBQO5RaQKPzsyrxASzVbpeu4nR9LNk5qhXgl72dNEpzPUwhuDR0nWQwzfGMMWpofC4m/Z4jiZpPqkkXWIXLfxF5aCDjAtooEPl5w16IB1bzD03CbtpuYmvu7lMBpyZeGASQPylNS+sApG+S/WGP/vjUOd8pKk4ozZWdkAJdJ9/nXpsbEdK8wXzIoxFD9qkxnIvpQG4xJ7qQUzrdkaVZYmuSHkVNbUBeyqkTalbuTVHZtQWHWZMLxwQiL85fURhInM4JzjmzNjnwGbXrDxoaputkk3JTUrm4RXJEqYKlHfgEx0gLhpzQec83nuWpH9yk+8HZw9aGEnHLPwtw6VmgnX9BSBpoCXSVMAXc1MXNn7OdEv9QrIKOpX/5miJgcf9bLTnUjXg8cjsqoBsDg9AhfGe5wF6A0LEeUdBc/5xVFXZZY7gtWef7yfwgKamj7hjQ6vezWI6DPJl8CSZEWwjThi9dd1KM2V/EFt2HwDorYLJe4g0B02kwNBB6j8e2PzKrLwLSL9OQAs4taBFD8octs6w="
+    secure: >
+      rgVtzou3HLvS3hkwL0e8ji8bYqesshnNkvslOKVxp61VUB2RKGni3SWKXbPRRxO9Cy+CelvNjkzzekQSHftI8dChuim4sj3Cobf/0bcDtvMUgYLF1
+      EJS0UJ2cVrhTsdkerJO7/Ai5gK1Mh5TsfYaWI6+OfA4MOrHeBVeNcSKKqkEWJQ627tMa3BTZ9/kn2YCROR7siJFsprkhNo0ZkF9u6wOLAKzPDWNhG
+      lAvqp7x+erWuOquhKvA1rCj1joyT8vLVN02u2zZbzfNrIsIveghBhvEAw7hVU1Urp3rJ2xVjRGA0co0uLH6tVfBlTiXmI/jDzqMrDpq6EnDuig1ML
+      NIDZ6hXozOLnYSryvau5ZqeQky94X0TylextK9kIH+4Y4zpgocp+6x+iUG6mfalbHnqRPJGxIBzFQwEUBU96L9PPBOcfBv5yQ6VolHrU0Xtwch5EP
+      nrn+Xwyi4VAMYFUjNhqi6ORcS/J/i+Ka+8DT/kr0IkqhdwW6AsrA80EmAdddYMQj/798uyar23VU4jAp0Kcuxf+xaaPHbrwVtVW3k77XfM8Ex3boM
+      cm4xZF0wlOojUNejB9aF99CgSQLFXp9iNik3A6wnC09BBNIJ2VKWruhhHzvKqUhSDNp801cB9SU+RBAXBGavpQajZMSU6P9M2hpIJWQiL0TNSggF6
+      DN2sY=
   on:
     tags: true
     condition: $TEST == 'node'
