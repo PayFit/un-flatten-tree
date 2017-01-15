@@ -2,12 +2,12 @@ export * from './intern';
 
 export const environments = [
     {
-        browserName: 'chrome',
+        browserName: 'browser',
         appiumVersion: '1.5.3',
-        deviceName: 'Samsung Galaxy S4 Device',
+        deviceName: 'Google Nexus 7C Emulator',
         deviceOrientation: 'portrait',
         platformVersion: '4.4',
-        platformName: 'Android'
+        platformName: 'android'
     }
     // {
     //     browserName: 'iphone',
