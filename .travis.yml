@@ -13,8 +13,10 @@ matrix:
     - env: TEST='browser'
 
 addons:
-  sauce_connect: 
-    direct_domains: www.google.com
+  sauce_connect:
+    direct_domains: all 
+    no_ssl_bump_domains: all
+    tunnel_domains: localhost
 
 branches:
   only:
