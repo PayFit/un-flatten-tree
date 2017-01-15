@@ -14,7 +14,7 @@ matrix:
 
 addons:
   sauce_connect: 
-    no_ssl_bump_domains: all
+    direct_domains: www.google.com
 
 branches:
   only:
