@@ -1,14 +1,14 @@
 un-flatten-tree
 =========
-[![npm version](https://badge.fury.io/js/un-flatten-tree.svg?t=1483367087460)](https://badge.fury.io/js/un-flatten-tree)
-[![Build Status](https://travis-ci.org/iyegoroff/un-flatten-tree.svg?t=1483367087460&branch=master)](https://travis-ci.org/iyegoroff/un-flatten-tree)
-[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/un-flatten-tree/badge.svg?t=1483367087460&branch=master)](https://coveralls.io/github/iyegoroff/un-flatten-tree?branch=master)
-[![Dependency Status](https://david-dm.org/iyegoroff/un-flatten-tree.svg?t=1483367087460)](https://david-dm.org/iyegoroff/un-flatten-tree)
-[![devDependency Status](https://david-dm.org/iyegoroff/un-flatten-tree/dev-status.svg?t=1483367087460)](https://david-dm.org/iyegoroff/un-flatten-tree#info=devDependencies)
-[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1483367087460)](#typescript)
-[![npm](https://img.shields.io/npm/l/express.svg?t=1483367087460)](https://www.npmjs.com/package/un-flatten-tree)
+[![npm version](https://badge.fury.io/js/un-flatten-tree.svg?t=1485103389214)](https://badge.fury.io/js/un-flatten-tree)
+[![Build Status](https://travis-ci.org/iyegoroff/un-flatten-tree.svg?t=1485103389214&branch=master)](https://travis-ci.org/iyegoroff/un-flatten-tree)
+[![Coverage Status](https://coveralls.io/repos/github/iyegoroff/un-flatten-tree/badge.svg?t=1485103389214&branch=master)](https://coveralls.io/github/iyegoroff/un-flatten-tree?branch=master)
+[![Dependency Status](https://david-dm.org/iyegoroff/un-flatten-tree.svg?t=1485103389214)](https://david-dm.org/iyegoroff/un-flatten-tree)
+[![devDependency Status](https://david-dm.org/iyegoroff/un-flatten-tree/dev-status.svg?t=1485103389214)](https://david-dm.org/iyegoroff/un-flatten-tree#info=devDependencies)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1485103389214)](#typescript)
+[![npm](https://img.shields.io/npm/l/express.svg?t=1485103389214)](https://www.npmjs.com/package/un-flatten-tree)
 
-[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-2.svg?t=1483367087460)](https://saucelabs.com/beta/builds/e59549995d6e4497884003c6c8c1e129)
+[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-2.svg?t=1485103389214)](https://saucelabs.com/beta/builds/e59549995d6e4497884003c6c8c1e129)
 
 A small module for converting trees to lists and vice versa. Can be used in browser and Node.
 
