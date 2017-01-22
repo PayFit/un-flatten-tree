@@ -102,7 +102,7 @@ bdd.describe('unflatten', () => {
             3: {id: 2, pid: null},
             7: {id: 1, pid: null},
             length: 8
-       };
+        };
 
         expect(
             unflatten(

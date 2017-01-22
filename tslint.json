@@ -4,6 +4,7 @@
     "rules": {
         "semicolon": [true, "always"],
         "no-param-reassign": true,
-        "no-shadowed-variable": true
+        "no-shadowed-variable": true,
+        "ter-indent": [true, 4]
     }
 }
