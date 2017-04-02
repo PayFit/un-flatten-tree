@@ -60,7 +60,7 @@ export function flatten<Node, OutNode, Id>(
     }
 
     return flat;
-};
+}
 
 /**
  * Converts list to tree.
@@ -131,4 +131,4 @@ export function unflatten <Node, OutNode>(
             []
         );
     }
-};
+}
