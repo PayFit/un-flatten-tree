@@ -46,7 +46,7 @@
     "intern": "^3.4.2",
     "lodash-amd": "^4.17.2",
     "tslint": "^5.0.0",
-    "tslint-config-standard": "^4.0.0",
+    "tslint-config-standard": "^5.0.2",
     "remap-istanbul": "^0.9.1",
     "typescript": "^2.0.10",
     "uglify-js": "^2.7.5",
