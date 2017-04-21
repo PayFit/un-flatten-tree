@@ -50,7 +50,7 @@
     "remap-istanbul": "^0.9.1",
     "typescript": "^2.0.10",
     "uglify-js": "^2.7.5",
-    "vrsource-tslint-rules": "^4.0.0"
+    "vrsource-tslint-rules": "^5.1.0"
   },
   "dependencies": {}
 }
