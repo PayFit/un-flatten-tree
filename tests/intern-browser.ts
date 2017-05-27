@@ -1,7 +1,13 @@
 export * from './intern';
 
 export const environments = [
-    { browserName: 'chrome', version: '45', platform: 'VISTA' }
+    {
+        browserName: 'chrome',
+        version: ['latest', 'latest-1'],
+        platform: 'WIN10',
+        screenshot: false,
+        screenrecorder: false
+    }
     // {
     //     browserName: 'Safari',
     //     appiumVersion: '1.6.3',
@@ -58,8 +64,6 @@ export const environments = [
     //     recordScreenshots: false
     // }
 ];
-
-export const useSauceConnect = false;
 
 export const tunnel = 'TestingBotTunnel';
 
