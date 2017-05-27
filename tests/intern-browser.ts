@@ -59,24 +59,6 @@ export const environments = [
     // }
 ];
 
-// const { TESTINGBOT_KEY, TESTINGBOT_SECRET } = process.env;
-
-// export const webdriver = {
-//     host: 'http://hub.testingbot.com/wd/hub',
-//     username: TESTINGBOT_KEY,
-//     accessKey: TESTINGBOT_SECRET
-// };
-
-// export const tunnelOptions = {
-//     verbose: true,
-//     apiKey: TESTINGBOT_KEY,
-//     apiSecret: TESTINGBOT_SECRET
-// };
-
-export const proxyPort = 9000;
-
-export const proxyUrl = 'http://localhost:9000/';
-
 export const useSauceConnect = false;
 
 export const tunnel = 'TestingBotTunnel';
