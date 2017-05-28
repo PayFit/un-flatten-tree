@@ -14,7 +14,7 @@ function env(env: Object) {
 export const environments = [
     env({
         browserName: 'chrome',
-        version: ['latest', 'latest-1'],
+        version: [58, 57],
         platform: 'WIN10'
     }),
     env({
@@ -22,9 +22,7 @@ export const environments = [
         version: '6.0',
         platform: 'ANDROID',
         deviceName: 'Galaxy S6',
-        platformName: 'Android',
-        idletimeout: 130,
-        'idle-timeout': 130
+        platformName: 'Android'
     })
     // env({
     //     browserName: 'firefox',
@@ -88,3 +86,10 @@ export const reporters = ['Runner'];
 export const tunnelOptions = {
     verbose: true
 };
+
+export const useSauceConnect = false;
+
+export const webdriver = {
+    host: 'http://hub.testingbot.com/wd/hub'
+};
+
