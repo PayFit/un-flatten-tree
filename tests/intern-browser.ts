@@ -73,7 +73,8 @@ export const environments = [
         version: '6.0',
         platform: 'ANDROID',
         deviceName: 'Galaxy S6',
-        platformName: 'Android'
+        platformName: 'Android',
+        idletimeout: 130
     })
 ];
 
