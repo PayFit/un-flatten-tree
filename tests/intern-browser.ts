@@ -22,7 +22,9 @@ export const environments = [
         version: '6.0',
         platform: 'ANDROID',
         deviceName: 'Galaxy S6',
-        platformName: 'Android'
+        platformName: 'Android',
+        fixSessionCapabilities: false,
+        simulator: true
     })
     // env({
     //     browserName: 'firefox',
@@ -82,14 +84,3 @@ export const tunnel = 'TestingBotTunnel';
 export const maxConcurrency = 5;
 
 export const reporters = ['Runner'];
-
-export const tunnelOptions = {
-    verbose: true
-};
-
-export const useSauceConnect = false;
-
-export const webdriver = {
-    host: 'http://hub.testingbot.com/wd/hub'
-};
-
