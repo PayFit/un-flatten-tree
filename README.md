@@ -8,7 +8,7 @@ un-flatten-tree
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?t=1495378566925)](#typescript)
 [![npm](https://img.shields.io/npm/l/express.svg?t=1495378566925)](https://www.npmjs.com/package/un-flatten-tree)
 
-[![Build Status](https://saucelabs.com/browser-matrix/iyegoroff-2.svg?t=1495378566925)](https://saucelabs.com/beta/builds/e59549995d6e4497884003c6c8c1e129)
+[![TestingBot Test Status](https://testingbot.com/buildmatrix/1fb860b187bf0a3a3f2ffa5dde98c432?auth=6e9a0e6d13166fce7fd31243ace5bc4c)](https://testingbot.com/builds/1fb860b187bf0a3a3f2ffa5dde98c432?auth=6e9a0e6d13166fce7fd31243ace5bc4c)
 
 A small module for converting trees to lists and vice versa. Can be used in browser and Node.
 
