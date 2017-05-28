@@ -23,7 +23,8 @@ export const environments = [
         platform: 'ANDROID',
         deviceName: 'Galaxy S6',
         platformName: 'Android',
-        idletimeout: 130
+        idletimeout: 130,
+        'idle-timeout': 130
     })
     // env({
     //     browserName: 'firefox',
@@ -83,3 +84,7 @@ export const tunnel = 'TestingBotTunnel';
 export const maxConcurrency = 5;
 
 export const reporters = ['Runner'];
+
+export const tunnelOptions = {
+    verbose: true
+};
