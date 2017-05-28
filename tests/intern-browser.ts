@@ -14,9 +14,17 @@ function env(env: Object) {
 export const environments = [
     env({
         browserName: 'chrome',
-        version: ['58', '57'],
+        version: ['latest', 'latest-1'],
         platform: 'WIN10'
     }),
+    env({
+        browserName: 'browser',
+        version: '6.0',
+        platform: 'ANDROID',
+        deviceName: 'Galaxy S6',
+        platformName: 'Android',
+        idletimeout: 130
+    })
     // env({
     //     browserName: 'firefox',
     //     version: ['53', '52'],
@@ -67,15 +75,7 @@ export const environments = [
     //     platform: 'ANDROID',
     //     deviceName: 'Nexus 7',
     //     platformName: 'Android'
-    // }),
-    env({
-        browserName: 'browser',
-        version: '6.0',
-        platform: 'ANDROID',
-        deviceName: 'Galaxy S6',
-        platformName: 'Android',
-        idletimeout: 130
-    })
+    // })
 ];
 
 export const tunnel = 'TestingBotTunnel';
