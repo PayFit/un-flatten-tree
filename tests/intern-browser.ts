@@ -4,19 +4,19 @@ function env(env: Object) {
     return {
         ...env,
         ...{
-            screenshot: false,
-            screenrecorder: false,
+            screenshot: true,
+            screenrecorder: true,
             public: true
         }
     };
 }
 
 export const environments = [
-    // env({
-    //     browserName: 'chrome',
-    //     version: ['58', '57'],
-    //     platform: 'WIN10'
-    // }),
+    env({
+        browserName: 'chrome',
+        version: ['58', '57'],
+        platform: 'WIN10'
+    }),
     // env({
     //     browserName: 'firefox',
     //     version: ['53', '52'],
