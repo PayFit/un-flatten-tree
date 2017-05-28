@@ -16,6 +16,7 @@
     "test": "npm run test:node",
     "test:node": "tsc -p tests && intern-client config=build/tests/intern",
     "test:browser": "tsc -p tests && intern-runner config=build/tests/intern-browser",
+    "test:appium": "tsc -p tests && intern-runner config=build/tests/intern-appium",
     "lint": "tslint un-flatten-tree.ts tests/**/*.ts",
     "coverage": "remap-istanbul -i coverage/coverage-final.json --type text-lcov | coveralls",
     "break-cache": "break-cache -i README.md -m \"\\.svg\" -o README.md",

@@ -12,19 +12,17 @@ function env(env: Object) {
 }
 
 export const environments = [
-    env({
-        browserName: 'chrome',
-        version: [58, 57],
-        platform: 'WIN10'
-    }),
+    // env({
+    //     browserName: 'chrome',
+    //     version: [58, 57],
+    //     platform: 'WIN10'
+    // }),
     env({
         browserName: 'browser',
         version: '6.0',
         platform: 'ANDROID',
         deviceName: 'Galaxy S6',
-        platformName: 'Android',
-        fixSessionCapabilities: false,
-        simulator: true
+        platformName: 'Android'
     })
     // env({
     //     browserName: 'firefox',
@@ -80,6 +78,13 @@ export const environments = [
 ];
 
 export const tunnel = 'TestingBotTunnel';
+
+export const tunnelOptions = {
+    hostname: '0.0.0.0',
+    port: 4723
+};
+
+export const proxyUrl = 'http://10.0.2.2:9000/';
 
 export const maxConcurrency = 5;
 
