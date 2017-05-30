@@ -52,8 +52,7 @@ export const environments = [
         version: '10.3',
         platform: 'SIERRA',
         deviceName: 'iPhone 6s Plus',
-        platformName: 'iOS',
-        automationName: 'XCUITest'
+        platformName: 'iOS'
     })
     // env({
     //     browserName: 'safari',
