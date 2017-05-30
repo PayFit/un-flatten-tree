@@ -17,13 +17,6 @@ export const environments = [
     //     version: [58, 57],
     //     platform: 'WIN10'
     // }),
-    env({
-        browserName: 'browser',
-        version: '6.0',
-        platform: 'ANDROID',
-        deviceName: 'Galaxy S6',
-        platformName: 'Android'
-    })
     // env({
     //     browserName: 'firefox',
     //     version: ['53', '52'],
@@ -54,13 +47,14 @@ export const environments = [
     //     version: '9',
     //     platform: 'CAPITAN'
     // }),
-    // env({
-    //     browserName: 'safari',
-    //     version: '10.3',
-    //     platform: 'SIERRA',
-    //     deviceName: 'iPhone 6s Plus',
-    //     platformName: 'iOS'
-    // }),
+    env({
+        browserName: 'safari',
+        version: '10.3',
+        platform: 'SIERRA',
+        deviceName: 'iPhone 6s Plus',
+        platformName: 'iOS',
+        automationName: 'XCUITest'
+    })
     // env({
     //     browserName: 'safari',
     //     version: '9.3',
@@ -74,14 +68,17 @@ export const environments = [
     //     platform: 'ANDROID',
     //     deviceName: 'Nexus 7',
     //     platformName: 'Android'
+    // }),
+    // env({
+    //     browserName: 'browser',
+    //     version: '6.0',
+    //     platform: 'ANDROID',
+    //     deviceName: 'Galaxy S6',
+    //     platformName: 'Android'
     // })
 ];
 
 export const tunnel = 'TestingBotTunnel';
-
-export const webdriver = {
-    host: 'http://hub.testingbot.com/wd/hub'
-};
 
 export const maxConcurrency = 5;
 
