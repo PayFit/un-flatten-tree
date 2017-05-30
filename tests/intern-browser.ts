@@ -54,46 +54,40 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        idletimeout: 300,
-        'idle-timeout': 300
-    }),
-    env({
-        browserName: 'safari',
-        version: '9.3',
-        platform: 'CAPITAN',
-        deviceName: 'iPhone 6s Plus',
-        platformName: 'iOS',
-        automationName: 'XCUITest',
-        idletimeout: 300,
-        'idle-timeout': 300
-    }),
-    env({
-        browserName: 'Chrome',
-        version: '7.1',
-        platform: 'ANDROID',
-        deviceName: 'Nexus 7',
-        platformName: 'Android',
-        idletimeout: 300,
-        'idle-timeout': 300
-    }),
-    env({
-        browserName: 'browser',
-        version: '6.0',
-        platform: 'ANDROID',
-        deviceName: 'Galaxy S6',
-        platformName: 'Android',
-        idletimeout: 300,
-        'idle-timeout': 300
+        idletimeout: 0,
+        'idle-timeout': 0
     })
+    // env({
+    //     browserName: 'safari',
+    //     version: '9.3',
+    //     platform: 'CAPITAN',
+    //     deviceName: 'iPhone 6s Plus',
+    //     platformName: 'iOS',
+    //     automationName: 'XCUITest',
+    //     idletimeout: 300,
+    //     'idle-timeout': 300
+    // }),
+    // env({
+    //     browserName: 'Chrome',
+    //     version: '7.1',
+    //     platform: 'ANDROID',
+    //     deviceName: 'Nexus 7',
+    //     platformName: 'Android',
+    //     idletimeout: 300,
+    //     'idle-timeout': 300
+    // }),
+    // env({
+    //     browserName: 'browser',
+    //     version: '6.0',
+    //     platform: 'ANDROID',
+    //     deviceName: 'Galaxy S6',
+    //     platformName: 'Android',
+    //     idletimeout: 300,
+    //     'idle-timeout': 300
+    // })
 ];
 
-export const proxyPort = 9000;
-
-export const proxyUrl = 'http://localhost:9000/';
-
-export const tunnelOptions = {
-    verbose: true
-};
+export const defaultTimeout = 
 
 export const tunnel = 'TestingBotTunnel';
 
