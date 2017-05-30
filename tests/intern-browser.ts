@@ -52,7 +52,9 @@ export const environments = [
         version: '10.3',
         platform: 'SIERRA',
         deviceName: 'iPhone 6s Plus',
-        platformName: 'iOS'
+        platformName: 'iOS',
+        idletimeout: 300,
+        'idle-timeout': 300
     })
     // env({
     //     browserName: 'safari',
@@ -76,6 +78,14 @@ export const environments = [
     //     platformName: 'Android'
     // })
 ];
+
+export const proxyPort = 9000;
+
+export const proxyUrl = 'http://localhost:9000/';
+
+export const tunnelOptions = {
+    verbose: true
+};
 
 export const tunnel = 'TestingBotTunnel';
 
