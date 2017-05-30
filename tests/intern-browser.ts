@@ -15,7 +15,8 @@ export const capabilities = {
     launchTimeout: 600000,
     newCommandTimeout: 600,
     'idle-timeout': 600,
-    idletimeout: 600
+    idletimeout: 600,
+    fixSessionCapabilities: false
 };
 
 export const environments = [
