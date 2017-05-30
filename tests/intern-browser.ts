@@ -54,8 +54,10 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        launchTimeout: 150000,
-        newCommandTimeout: 150
+        launchTimeout: 600000,
+        newCommandTimeout: 600,
+        'idle-timeout': 600,
+        idletimeout: 600
     })
     // env({
     //     browserName: 'safari',
@@ -87,7 +89,7 @@ export const environments = [
     // })
 ];
 
-export const defaultTimeout = 150000;
+export const defaultTimeout = 600000;
 
 export const tunnel = 'TestingBotTunnel';
 
