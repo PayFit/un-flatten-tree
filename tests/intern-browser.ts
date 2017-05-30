@@ -87,7 +87,7 @@ export const environments = [
     // })
 ];
 
-export const defaultTimeout = 
+export const defaultTimeout = 150000;
 
 export const tunnel = 'TestingBotTunnel';
 
