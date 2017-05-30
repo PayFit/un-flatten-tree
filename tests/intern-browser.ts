@@ -11,6 +11,13 @@ function env(env: Object) {
     };
 }
 
+export const capabilities = {
+    launchTimeout: 600000,
+    newCommandTimeout: 600,
+    'idle-timeout': 600,
+    idletimeout: 600
+};
+
 export const environments = [
     // env({
     //     browserName: 'chrome',
