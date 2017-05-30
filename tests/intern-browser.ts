@@ -54,8 +54,8 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        idletimeout: 0,
-        'idle-timeout': 0
+        launchTimeout: 150000,
+        newCommandTimeout: 150
     })
     // env({
     //     browserName: 'safari',
