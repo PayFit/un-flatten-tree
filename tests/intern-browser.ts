@@ -53,6 +53,7 @@ export const environments = [
         platform: 'SIERRA',
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
+        automationName: 'XCUITest',
         idletimeout: 300,
         'idle-timeout': 300
     })
