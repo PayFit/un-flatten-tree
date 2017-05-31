@@ -54,7 +54,11 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        fixSessionCapabilities: false
+        fixSessionCapabilities: false,
+        x: true,
+        y: false,
+        z: '',
+        a: 0
     })
     // env({
     //     browserName: 'safari',
