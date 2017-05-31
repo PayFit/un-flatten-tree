@@ -54,10 +54,6 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        launchTimeout: 600000,
-        newCommandTimeout: 600,
-        'idle-timeout': 600,
-        idletimeout: 600,
         fixSessionCapabilities: false
     })
     // env({
@@ -89,8 +85,6 @@ export const environments = [
     //     'idle-timeout': 300
     // })
 ];
-
-export const defaultTimeout = 600000;
 
 export const tunnel = 'TestingBotTunnel';
 
