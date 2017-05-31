@@ -48,7 +48,6 @@ export const environments = [
     //     platform: 'CAPITAN'
     // }),
     env({
-        fixSessionCapabilities: false,
         browserName: 'safari',
         version: '10.3',
         platform: 'SIERRA',
@@ -58,7 +57,8 @@ export const environments = [
         launchTimeout: 600000,
         newCommandTimeout: 600,
         'idle-timeout': 600,
-        idletimeout: 600
+        idletimeout: 600,
+        fixSessionCapabilities: false
     })
     // env({
     //     browserName: 'safari',
