@@ -26,6 +26,8 @@ export const tunnelOptions = {
   port: 4723
 };
 
+export const environmentRetries = 0;
+
 export const proxyUrl = 'http://192.168.1.180:9000/';
 
 export const reporters = ['Runner'];

@@ -56,7 +56,8 @@ export const environments = [
         platformName: 'iOS',
         automationName: 'XCUITest',
         fixSessionCapabilities: false,
-        'idle-timeout': 600
+        'idle-timeout': 0,
+        leaveRemoteOpen: true
     })
     // env({
     //     browserName: 'safari',
