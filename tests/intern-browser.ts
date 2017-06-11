@@ -96,4 +96,4 @@ export const reporters = ['Runner'];
 
 export const defaultTimeout = 600000;
 
-export const environmentRetries = 1;
+export const environmentRetries = 0;
