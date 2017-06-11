@@ -7,15 +7,16 @@ export const environments = [
     platform: 'iOS',
     platformName: 'iOS',
     deviceName: 'iPhone Simulator',
-    automationName: 'XCUITest'
-  },
-  {
-    browserName: 'Chrome',
-    version: '6.0',
-    platform: 'Android',
-    platformName: 'Android',
-    deviceName: 'j7xelte'
+    automationName: 'XCUITest',
+    fixSessionCapabilities: false
   }
+  // {
+  //   browserName: 'Chrome',
+  //   version: '6.0',
+  //   platform: 'Android',
+  //   platformName: 'Android',
+  //   deviceName: 'j7xelte'
+  // }
 ];
 
 export const tunnel = 'NullTunnel';

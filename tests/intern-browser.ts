@@ -1,4 +1,5 @@
 export * from './intern';
+import * as Promise from 'dojo/Promise';
 
 function env(env: Object) {
     return {
@@ -54,7 +55,8 @@ export const environments = [
         deviceName: 'iPhone 6s Plus',
         platformName: 'iOS',
         automationName: 'XCUITest',
-        fixSessionCapabilities: false
+        fixSessionCapabilities: false,
+        'idle-timeout': 600
     })
     // env({
     //     browserName: 'safari',
@@ -86,10 +88,12 @@ export const environments = [
     // })
 ];
 
-export const fixSessionCapabilities = false;
-
 export const tunnel = 'TestingBotTunnel';
 
 export const maxConcurrency = 5;
 
 export const reporters = ['Runner'];
+
+export const defaultTimeout = 600000;
+
+export const environmentRetries = 1;
