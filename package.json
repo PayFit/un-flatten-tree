@@ -44,16 +44,16 @@
   },
   "homepage": "https://github.com/iyegoroff/un-flatten-tree#readme",
   "devDependencies": {
-    "@types/lodash": "^4.14.64",
+    "@types/lodash": "^4.14.68",
     "break-cache": "^1.0.3",
     "coveralls": "^2.13.1",
-    "intern": "^3.4.4",
-    "lodash-amd": "^4.17.2",
-    "remap-istanbul": "^0.9.1",
-    "tslint": "^5.2.0",
-    "tslint-config-standard": "^4.0.0",
-    "typescript": "^2.3.2",
-    "vrsource-tslint-rules": "^4.0.0"
+    "intern": "^3.4.5",
+    "lodash-amd": "^4.17.4",
+    "remap-istanbul": "^0.9.5",
+    "tslint": "^5.5.0",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "^2.4.1",
+    "vrsource-tslint-rules": "^5.1.0"
   },
   "dependencies": {}
 }
