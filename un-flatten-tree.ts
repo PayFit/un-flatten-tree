@@ -13,8 +13,6 @@ const find = <T>(list: ArrayLike<T>, predicate: (item: T) => boolean) => {
   return undefined;
 };
 
-const identity = <T>(x: T): T => x;
-
 /**
  * Converts tree to list.
  *
@@ -32,7 +30,7 @@ export function flatten<Node, OutNode, Id>(
     parentNode?: Node,
     nodeId?: Id,
     parentNodeId?: Id
-  ) => OutNode = identity,
+  ) => OutNode = (node: Node & OutNode) => node,
   generateId: (node: Node) => Id = () => undefined
 ): OutNode[] {
   const stack = tree && tree.length ? [{ pointer: tree, offset: 0 }] : [];
