@@ -1,5 +1,6 @@
-dist
 build
+dist/un-flatten-tree.d.ts
+dist/un-flatten-tree.js.map
 
 # Logs
 logs

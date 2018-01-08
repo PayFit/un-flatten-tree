@@ -1,16 +1,12 @@
 {
   "name": "un-flatten-tree",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Functions for converting trees to lists and vice versa.",
   "main": "dist/un-flatten-tree.js",
-  "module": "dist/un-flatten-tree.es.js",
-  "types": "dist/un-flatten-tree.d.ts",
   "scripts": {
     "preversion": "npm run reinstall && npm run build && npm run lint && npm test && npm run break-cache-commit",
     "postversion": "git add -A . && git push && git push --tags",
-    "build": "npm run build:es2015 && npm run build:umd",
-    "build:es2015": "tsc -p . -m es2015 -t es2015 && mv ./dist/un-flatten-tree.js ./dist/un-flatten-tree.es.js",
-    "build:umd": "tsc",
+    "build": "tsc",
     "reinstall": "npm run clean && rm -rf node_modules && npm i",
     "clean": "rm -rf dist build coverage",
     "test": "npm run test:node",
@@ -23,10 +19,7 @@
     "break-cache-commit": "npm run break-cache && git commit -am \"[skip ci] readme cache break\""
   },
   "files": [
-    "dist/",
-    "tests/",
-    "un-flatten-tree.ts",
-    "tsconfig.json"
+    "dist/"
   ],
   "repository": {
     "type": "git",
